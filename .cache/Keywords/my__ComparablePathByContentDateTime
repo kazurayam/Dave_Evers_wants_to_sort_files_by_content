@@ -1,10 +1,10 @@
 {
-  "keywordFileContentHash": "16B505818BBF14DDABDD96E1FA72EA56",
+  "keywordFileContentHash": "BE74AD396236F26E2239C0858A85B9B2",
   "keywordClasses": [
     {
       "name": "my.ComparablePathByContentDateTime",
       "keywordMethods": []
     }
   ],
-  "javadocParsed": true
+  "javadocParsed": false
 }

@@ -45,16 +45,18 @@ public class ComparablePathByContentDateTimeTest {
 
 	@Test
 	public void test_DATETIMEFORMATTER() {
-		LocalDateTime ldt = ComparablePathByContentDateTime.DATETIMEFORMATTER.parse("26 Oct 2022 14:43:15 -0700")
+		LocalDateTime ldt = 
+			LocalDateTime.parse("26 Oct 2022 14:43:15 -0700",
+								ComparablePathByContentDateTime.DATETIMEFORMATTER)
 		println ldt
 	}
 	
-	@Ignore
+	
 	@Test
 	public void test_getContentDate() {
 		Map<String, String> headers = ComparablePathByContentDateTime.parseContentForHeaders(paths.get(0));
 		LocalDateTime timestamp = ComparablePathByContentDateTime.getContentDate(headers)
-		println timestamp.format(ComparablePathByContentDateTime.dtf)
+		println timestamp.format(ComparablePathByContentDateTime.DATETIMEFORMATTER)
 		assertNotNull(timestamp)
 	}
 

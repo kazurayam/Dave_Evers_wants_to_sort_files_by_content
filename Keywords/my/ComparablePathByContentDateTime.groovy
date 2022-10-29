@@ -3,6 +3,7 @@ package my
 import java.nio.file.Path
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
+import java.time.format.DateTimeFormatterBuilder
 
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
@@ -33,7 +34,11 @@ class ComparablePathByContentDateTime extends ComparablePath
 
 	private static final Logger logger = LoggerFactory.getLogger(ComparablePathByContentDateTime.class);
 
-	public static final DateTimeFormatter DATETIMEFORMATTER = DateTimeFormatter.ofPattern("dd LLL yyyy hh:mm:ss Z")
+	public static final DateTimeFormatter DATETIMEFORMATTER = 
+						new DateTimeFormatterBuilder()
+							.append(DateTimeFormatter.ofPattern("dd MMM yyyy HH:mm:ss Z", Locale.US))
+							.appendOffset("+HHMM", "+0000")
+							.toFormatter()
 
 	protected LocalDateTime contentDateTime
 
@@ -65,7 +70,7 @@ class ComparablePathByContentDateTime extends ComparablePath
 
 	protected static LocalDateTime getContentDate(Map<String, String> headers) {
 		if (headers.containsKey("Date")) {
-			return DATETIMEFORMATTER.parse(headers.get("Date"))
+			return LocalDateTime.parse(headers.get("Date"), DATETIMEFORMATTER)
 		} else {
 			return LocalDateTime.of(1970, 1, 1, 0, 0, 0)
 		}
