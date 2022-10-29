@@ -1,0 +1,13 @@
+X-Sender: "Do Not Reply" donotreply@anywhere.com
+X-Receiver: xyz.com
+MIME-Version: 1.0
+From: "Do Not Reply" donotreply@anywhere.com
+To: xyz.com
+Date: 26 Oct 2022 14:43:15 -0700
+Subject: Hello world, what is my URL?
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: base64
+
+
+Hello world, what is my URL?
+aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbQ==
