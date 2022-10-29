@@ -6,6 +6,7 @@
    <UUID>2ff8a9f5-9cec-43e3-8de0-47f102a79bca</UUID>
    <migratedVersion>5.9.0</migratedVersion>
    <pageLoadTimeout>0</pageLoadTimeout>
+   <projectFileLocation>/Users/kazuakiurayama/katalon-workspace/SortingFilesByContentDateTime/SortingFilesByContentDateTime.prj</projectFileLocation>
    <sourceContent>
       <sourceFolderList>
          <sourceFolderConfiguration>
