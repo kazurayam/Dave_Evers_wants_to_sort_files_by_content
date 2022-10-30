@@ -16,7 +16,9 @@ Path dataDir = Paths.get(RunConfiguration.getProjectDir()).resolve("Include/data
 List<ComparablePath> emlFiles =
 	Files.list(dataDir)
 		.filter({ p -> p.toString().endsWith(".eml") })
+		
 		.map({ p -> new ComparablePath(p) })
+		
 		.collect(Collectors.toList())
 
 // sort the list by descending order
