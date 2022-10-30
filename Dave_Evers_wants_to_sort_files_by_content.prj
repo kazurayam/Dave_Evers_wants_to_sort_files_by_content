@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Project>
    <description></description>
-   <name>SortingFilesByContentDateTime</name>
+   <name>Dave_Evers_wants_to_sort_files_by_content</name>
    <tag></tag>
    <UUID>2ff8a9f5-9cec-43e3-8de0-47f102a79bca</UUID>
    <migratedVersion>5.9.0</migratedVersion>
    <pageLoadTimeout>0</pageLoadTimeout>
-   <projectFileLocation>/Users/kazuakiurayama/katalon-workspace/SortingFilesByContentDateTime/SortingFilesByContentDateTime.prj</projectFileLocation>
+   <projectFileLocation>/Users/kazuakiurayama/katalon-workspace/Dave_Evers_wants_to_sort_files_by_content/Dave_Evers_wants_to_sort_files_by_content.prj</projectFileLocation>
    <sourceContent>
       <sourceFolderList>
          <sourceFolderConfiguration>
