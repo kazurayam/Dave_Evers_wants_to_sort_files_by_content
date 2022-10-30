@@ -7,10 +7,37 @@ This project was developed to propose a solution that was raised by Dave Evers i
 
 - https://forum.katalon.com/t/how-do-i-decode-a-base64-encoded-url-from-a-test-email-using-katalon/79979/19
 
+## Problem to solve
 
-# How to try the solution
+One day in the "Katalon Community" forum I was asked a question. The original poster asked as follows:
 
-You need to download a jar from
+- He has several hundreds of text files in a directory. Every file was named with a postfix ".eml", which stands for "Email message", like 79edddc6-ce98-4eff-b8ea-414e392bce1f.eml.
+
+- The files have similar content like this:
+
+```
+X-Sender: "Do Not Reply" donotreply@anywhere.com
+X-Receiver: xyz.com
+MIME-Version: 1.0
+From: "Do Not Reply" donotreply@anywhere.com
+To: xyz.com
+Date: 26 Oct 2022 14:43:15 -0700
+Subject: Hello world, what is my URL?
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: base64
+
+aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbQ==
+```
+
+- He wants to get a list of file names, which are sorted by descending order of the "Date" header value in the file content, for example: `Date: 26 Oct 2022 14:43:15 -0700`.
+
+## How to try the solution in Katalon Studio
+
+You can try the solution in your local Katalon Studio. I assume you have a Katalon project created already. The project should have [some `.eml` files](https://github.com/kazurayam/Dave_Evers_wants_to_sort_files_by_content/tree/master/Include/data) in the following folder:
+
+- <projectDir>/Include/data
+
+Plus, You need to download an external jar that I made from
 
 - https://github.com/kazurayam/SortingFilesByDateTimeInContent/releases/tag/0.1.0
 
