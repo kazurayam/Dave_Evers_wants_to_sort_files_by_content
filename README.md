@@ -74,8 +74,24 @@ emlFiles.eachWithIndex  { p, index ->
 }
 ```
 
+
+```
+2022-10-31 07:42:18.223 DEBUG testcase.TC                              - 1: dataDir = get(getProjectDir()).resolve("Include/data")
+2022-10-31 07:42:18.249 DEBUG testcase.TC                              - 2: emlFiles = reverseOrder()).collect(Collectors.toList())
+2022-10-31 07:42:18.451 DEBUG testcase.TC                              - 3: emlFiles.eachWithIndex({ java.lang.Object p, java.lang.Object index -> ... })
+1	20221026_144315	79edddc6-ce98-4eff-b8ea-414e392bce1f.eml
+2	20221026_120000	f503182a-d0ef-444d-a52b-658b5d10de81.eml
+3	20221026_110000	test.eml
+4	20221026_110000	ccc.eml
+5	20221026_110000	bb.eml
+6	20221026_110000	a.eml
+2022-10-31 07:42:18.484 INFO  c.k.katalon.core.main.TestCaseExecutor   - END Test Cases/TC
+```
+
+Please note that the timestamp values are picked out of the file content.
+
 The `com.kazurayam.study20221030.PathComparableByContentEmailDate` class implements everything needed to solve the Dave's problem. If you want to study more, please visit the following GitHub project and read the source.
 
 https://github.com/kazurayam/SortingFilesByDateTimeInContent
 
-Dave's problem is a pure Java/Groovy programming problem. It has nothing to do with Katalon Studio. So the SortingFilesByDateTimeContent project is not a Katalon project. It is a plain Java8 + Gradle + JUnit5 project. I used my favorite IDE (Intelli-J IDEA) to develop this project.
+Dave's problem is a pure Java/Groovy programming problem. It has nothing specific to Katalon Studio. So the SortingFilesByDateTimeContent project is not a Katalon project. It is a plain Java8 + Gradle + JUnit5 project. I used my favorite IDE (Intelli-J IDEA) to develop this project.
